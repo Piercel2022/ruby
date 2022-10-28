@@ -80,7 +80,9 @@ GRAVITATIONAL_CONST = 28  # This will cause a warning
 # Knowledge Check
 
 1. Who is the principal designer of the Ruby language?
-
+```ruby
+NAME = "Matz"
+```
 # Assignment
 family.rb
 ```ruby
@@ -95,8 +97,8 @@ Using the above code, create a program which declares a variable, **age_sum**, t
 
 The program should print the following to the console:
 ```ruby
-Sum of ages = # ? 
-Result      = # ?
+age_sum = mom + dad + john + mary 
+result = (mom * dad) / (john - mary)
 ```
 
 *Extra Credit: The program should also print the message shown above, but with each line reversed.*

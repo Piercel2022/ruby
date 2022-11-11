@@ -118,3 +118,14 @@ name4 = "Melisandre"
 ```
 
 The characters in *Game of Thrones* are quite memorable, but memorizing their names can be difficult. The exercise in this unit is to find the average length of the names shown above and store it in a variable, **avg_length**. After that, you should declare a variable, **my_name**, and assign it the value that a user types into the console. Lastly, you should use an if-else block to compare the length of **my_name** to **avg_length** and print "[my_name] is shorter than average" when it is shorter, and "[my_name] is longer than average" otherwise.
+
+```Ruby
+avg_length = (name1.size + name2.size + name3.size + name4.size) / 2
+puts "What is your name please?"
+my_name = gets.chomp
+
+if(my_name < avg_length)
+print "#{my_name} is shorter than average"
+else
+print "#{my_name} is longer than average"
+```

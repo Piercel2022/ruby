@@ -57,6 +57,12 @@ end
 ```
 
 ```ruby
+for i in 1.upto(1000)
+  puts "Hi, mom!"
+end
+```
+
+```ruby
 for count in 10.downto(1)
   puts "T-minus #{count}..."
 end

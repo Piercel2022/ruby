@@ -1,6 +1,6 @@
 # Loops
 
-If I asked you to write a program that prints ```Hi, mom!``` three times, how would you write it?  Probably something like this:
+If I asked you to write a program that prints `Hi, mom!` three times, how would you write it? Probably something like this:
 
 ```ruby
 puts "Hi, mom!"
@@ -21,7 +21,7 @@ while count < 1000
 end
 ```
 
-Let's break it down. The block of code contained in the ```while``` section is repeated as long as the variable ```count``` is less than 1000. It's very important you increment count here so that it eventually reaches its termination condition, otherwise you'll end up with an **infinite loop**.
+Let's break it down. The block of code contained in the `while` section is repeated as long as the variable `count` is less than 1000. It's very important you increment count here so that it eventually reaches its termination condition, otherwise you'll end up with an **infinite loop**.
 
 ```ruby
 count = 0
@@ -33,7 +33,7 @@ end
 
 ## Until
 
-Similar to ```unless``` and ```if```, ```until``` mirrors the behavior of ```while``` except it tests that a certain condition is false rather than true.
+Similar to `unless` and `if`, `until` mirrors the behavior of `while` except it tests that a certain condition is false rather than true.
 
 ```ruby
 count = 10
@@ -61,14 +61,14 @@ for count in 10.downto(1)
   puts "T-minus #{count}..."
 end
 
-puts "Blast off!" 
+puts "Blast off!"
 ```
 
 Seems pretty succinct, doesn't it? Well, Ruby offers you this additional style:
 
 ```ruby
 (1..3).each do |i|
-  puts "Round #{i} - FIGHT!" 
+  puts "Round #{i} - FIGHT!"
 end
 ```
 
@@ -82,7 +82,7 @@ end
 
 ## Loop
 
-The last kind I'd like to mention is invoked using the ```loop``` keyword. Go figure.
+The last kind I'd like to mention is invoked using the `loop` keyword. Go figure.
 
 ```ruby
 coin_flips = 0
@@ -101,7 +101,7 @@ puts "Game Over"
 
 ## Break
 
-Anything that you put in a ```loop``` block will happen infinitely unless you use the keyword ```break```. Using ```break``` inside of a loop will cause the program to leave that block of code and return to the next highest scope. Let's get a bit more complicated and show what that means.
+Anything that you put in a `loop` block will happen infinitely unless you use the keyword `break`. Using `break` inside of a loop will cause the program to leave that block of code and return to the next highest scope. Let's get a bit more complicated and show what that means.
 
 ```ruby
 while true
@@ -115,7 +115,7 @@ while true
 end
 ```
 
-Without the ```break``` keyword in nested loop, we would have an infinite loop that prints ```Inner block```. Likewise, without the second ```break```, there'd be an infinite loop of ```Outer block```. However, since we have both, the above code will only print:
+Without the `break` keyword in nested loop, we would have an infinite loop that prints `Inner block`. Likewise, without the second `break`, there'd be an infinite loop of `Outer block`. However, since we have both, the above code will only print:
 
 ```ruby
 Inner block
@@ -126,7 +126,7 @@ From this, we can see that the break statement will only escape from whatever th
 
 ## Next
 
-The next closest relative to ```break``` is the keyword **next**. Using ```next``` in a loop will immediately skip to the subsequent iteration of the loop, ignoring the rest of the statements in the block.
+The next closest relative to `break` is the keyword **next**. Using `next` in a loop will immediately skip to the subsequent iteration of the loop, ignoring the rest of the statements in the block.
 
 ```ruby
 (0...4).each do |i| # ... is exclusive rather than inclusive (..)
@@ -143,15 +143,16 @@ The value of i is 2
 The value of i is 3
 ```
 
-As you can see, while ```break``` leaves the entire enclosing loop immediately, ```next``` just skips to the next iteration.
+As you can see, while `break` leaves the entire enclosing loop immediately, `next` just skips to the next iteration.
 
-Finally, although Ruby also offers the ```redo``` and ```retry``` keywords when working with loops, you probably won't need to know them right now. If you're curious, please look them up and think of ways to use them.
+Finally, although Ruby also offers the `redo` and `retry` keywords when working with loops, you probably won't need to know them right now. If you're curious, please look them up and think of ways to use them.
 
 # Knowledge Check
 
 1. Are variables declared in a for-loop available after a loop has ended?
 
 # Assignment
+
 fibonacci.rb
 
 The Fibonacci sequence is a popular programming exercise for new programmers. If you're not familiar with it, the first ten Fibonacci numbers are 1, 1, 2, 3, 5, 8, 13, 21, 34, and 55. You should be able to see a pattern in this sequence. Using conditionals and looping techniques we've covered so far, write some code that will print each of first ten Fibonacci numbers on its own line.
@@ -160,5 +161,7 @@ The Fibonacci sequence is a popular programming exercise for new programmers. If
 # Print out all the Fibonacci numbers from 1 to 10 in order
 
 # Your code goes here
-
+def fibo(n)
+  n <= 2 ? 1 : fibo(n-1) + fibo(n-2)
+end
 ```
